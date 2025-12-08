@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from typing import Tuple
 """ Implement shared pieces of Erlang node negotiation and dist_proto
     protocol
 """
@@ -23,7 +24,7 @@ DIST_VSN_PAIR = (DIST_VSN_MAX, DIST_VSN_MIN)
 " Supported dist_proto protocol version (MAX,MIN). "
 
 
-def dist_version_check(max_min: tuple) -> bool:
+def dist_version_check(max_min: Tuple) -> bool:
     """ Check pair of versions against versions which are supported by us
 
         :type max_min: tuple(int, int)
